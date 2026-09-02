@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <!-- Icon -->
+    <link rel="icon" href="./assets/images/icon.logo.svg" />
+
+    <title>Edmund Kpebah | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="w-full flex-row justify-center bg-white header gray-border-bottom">
+      <nav class="flex-row justify-center align-center w-full container px-16 px-32-720">
+        <!-- Logo -->
+        <a href="#"
+          ><div class="flex-row align-center gap-8">
+            <div class="flex-column justify-center align-center google-sans-flex pxy-8 status medium-14 radius-50">EK</div>
+
+            <p class="medium-16 brightBlack google-sans-flex hide display-block-520">Edmund S. Kpebah</p>
+          </div></a
+        >
+
+        <!-- Navigation -->
+        <div class="flex-row justify-center align-center gap-16 nav google-sans-flex margin-l-auto">
+          <!-- Nav Elements -->
+          <div class="hide display-block-920">
+            <ul class="flex-row align-center gap-24">
+              <li><a href="#hero" class="medium-14 p-color a-hover a-active">About</a></li>
+              <li>
+                <a href="#projects" class="medium-14 p-color a-hover a-active">Projects</a>
+              </li>
+              <li>
+                <a href="#workExperiences" class="medium-14 p-color a-hover a-active">Experience</a>
+              </li>
+              <li><a href="#skills" class="medium-14 p-color a-hover a-active">Skills</a></li>
+              <li><a href="#contact" class="medium-14 p-color a-hover a-active">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Header Controls-->
+          <div class="justify-center align-center gap-12 hide flex-row-920">
+            <!-- Light Mode / Dark Mode-->
+            <div class="pxy-8 pointer mode">
+              <button class="color_mode pointer" aria-label="Toggle Light Mode">
+                <svg width="24.667" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 15.2727C12.9091 15.2727 13.6818 14.9545 14.3182 14.3182C14.9545 13.6818 15.2727 12.9091 15.2727 12C15.2727 11.0909 14.9545 10.3182 14.3182 9.68182C13.6818 9.04545 12.9091 8.72727 12 8.72727C11.0909 8.72727 10.3182 9.04545 9.68182 9.68182C9.04545 10.3182 8.72727 11.0909 8.72727 12C8.72727 12.9091 9.04545 13.6818 9.68182 14.3182C10.3182 14.9545 11.0909 15.2727 12 15.2727ZM12 17.4545C10.4909 17.4545 9.20455 16.9227 8.14091 15.8591C7.07727 14.7955 6.54545 13.5091 6.54545 12C6.54545 10.4909 7.07727 9.20455 8.14091 8.14091C9.20455 7.07727 10.4909 6.54545 12 6.54545C13.5091 6.54545 14.7955 7.07727 15.8591 8.14091C16.9227 9.20455 17.4545 10.4909 17.4545 12C17.4545 13.5091 16.9227 14.7955 15.8591 15.8591C14.7955 16.9227 13.5091 17.4545 12 17.4545ZM4.36364 13.0909H0V10.9091H4.36364V13.0909ZM24 13.0909H19.6364V10.9091H24V13.0909ZM10.9091 4.36364V0H13.0909V4.36364H10.9091ZM10.9091 24V19.6364H13.0909V24H10.9091ZM5.89091 7.36364L3.13636 4.71818L4.69091 3.10909L7.30909 5.83636L5.89091 7.36364ZM19.3091 20.8909L16.6636 18.1364L18.1091 16.6364L20.8636 19.2818L19.3091 20.8909ZM16.6364 5.89091L19.2818 3.13636L20.8909 4.69091L18.1636 7.30909L16.6364 5.89091ZM3.10909 19.3091L5.86364 16.6636L7.36364 18.1091L4.71818 20.8636L3.10909 19.3091Z"
+                    fill="#5F6368"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Get in touch Button -->
+            <a href="#contact" class="flex-row justify-center align-center radius-50 white-color pxy-10-20 bg-tampa">Get in touch</a>
+          </div>
+
+          <!-- Hamburger Menu -->
+          <div>
+            <button id="hamburger-button" class="pxy-12 btn-reset brightBlack hide-920" aria-label="Open Menu">
+              <svg id="ham-open" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.6667 6.66667H1.33333C0.533333 6.66667 0 7.2 0 8C0 8.8 0.533333 9.33333 1.33333 9.33333H22.6667C23.4667 9.33333 24 8.8 24 8C24 7.2 23.4667 6.66667 22.6667 6.66667ZM1.33333 2.66667H22.6667C23.4667 2.66667 24 2.13333 24 1.33333C24 0.533333 23.4667 0 22.6667 0H1.33333C0.533333 0 0 0.533333 0 1.33333C0 2.13333 0.533333 2.66667 1.33333 2.66667ZM22.6667 13.3333H1.33333C0.533333 13.3333 0 13.8667 0 14.6667C0 15.4667 0.533333 16 1.33333 16H22.6667C23.4667 16 24 15.4667 24 14.6667C24 13.8667 23.4667 13.3333 22.6667 13.3333Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <svg id="ham-close" class="hide" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.8173 11.9983L23.409 3.42536C23.7852 3.04906 23.9966 2.53869 23.9966 2.00653C23.9966 1.47437 23.7852 0.963996 23.409 0.587699C23.0327 0.211402 22.5224 0 21.9903 0C21.4583 0 20.948 0.211402 20.5717 0.587699L12 9.18062L3.42828 0.587699C3.05204 0.211402 2.54174 -3.96493e-09 2.00965 0C1.47757 3.96494e-09 0.967269 0.211402 0.591025 0.587699C0.214782 0.963996 0.00340991 1.47437 0.00340991 2.00653C0.0034099 2.53869 0.214782 3.04906 0.591025 3.42536L9.18272 11.9983L0.591025 20.5712C0.40375 20.757 0.255105 20.978 0.153666 21.2215C0.0522265 21.4651 0 21.7263 0 21.9901C0 22.2539 0.0522265 22.5151 0.153666 22.7586C0.255105 23.0021 0.40375 23.2231 0.591025 23.4089C0.776772 23.5962 0.99776 23.7449 1.24124 23.8463C1.48473 23.9478 1.74589 24 2.00965 24C2.27342 24 2.53458 23.9478 2.77807 23.8463C3.02155 23.7449 3.24254 23.5962 3.42828 23.4089L12 14.816L20.5717 23.4089C20.7575 23.5962 20.9785 23.7449 21.2219 23.8463C21.4654 23.9478 21.7266 24 21.9903 24C22.2541 24 22.5153 23.9478 22.7588 23.8463C23.0022 23.7449 23.2232 23.5962 23.409 23.4089C23.5962 23.2231 23.7449 23.0021 23.8463 22.7586C23.9478 22.5151 24 22.2539 24 21.9901C24 21.7263 23.9478 21.4651 23.8463 21.2215C23.7449 20.978 23.5962 20.757 23.409 20.5712L14.8173 11.9983Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            <!-- Hamburger Display -->
+            <div id="hamburger-display" class="z-index-3 h-full w-full absolute-position pxy-24-48 bg-white hide">
+              <ul class="flex-column align-start w-full">
+                <li class="w-full gray-border-bottom"><a href="#hero" class="regular-18 py-18 brightBlack w-full display-block">About</a></li>
+                <li class="w-full gray-border-bottom">
+                  <a href="#projects" class="regular-18 py-18 brightBlack w-full display-block">Projects</a>
+                </li>
+                <li class="w-full gray-border-bottom">
+                  <a href="#workExperiences" class="regular-18 py-18 brightBlack w-full display-block">Experience</a>
+                </li>
+                <li class="w-full gray-border-bottom"><a href="#skills" class="regular-18 py-18 brightBlack w-full display-block">Skills</a></li>
+                <li class="w-full gray-border-bottom"><a href="#contact" class="regular-18 py-18 brightBlack w-full display-block">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-column align-center bg-white w-full google-sans-flex">
+      <!-- Hero Section -->
+      <section id="hero" class="flex-column align-center gap-32 margin-t-80 container pxy-64-16 pxy-80-48 scroll-m-t-60">
+        <div class="flex-column align-center gap-24 w-full">
+          <img src="./assets/images/img.EdmundPicture.svg" alt="Edmund S. Kpebah Picture" />
+
+          <p class="medium-14 p-color text-center w-full medium-16-720">Fullstack Developer</p>
+
+          <h1 class="w-full text-center">Edmund S. Kpebah</h1>
+
+          <p class="medium-14 p-color text-center container-max-600 w-full medium-18-720">
+            Frontend Developer building toward full-stack, with hands-on experience in HTML, CSS, JavaScript, and React through independent projects. Currently
+            expanding into TypeScript, Node.js, and PostgreSQL. Passionate about problem-solving and turning real-world inefficiencies into clean, usable
+            software.
+          </p>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="flex-column align-center gap-24 w-full">
+          <div class="flex-column align-center gap-16 w-full justify-center flex-row-520">
+            <!-- Get in touch Button -->
+            <a href="#contact" class="flex-row justify-center align-center radius-50 white-color pxy-10-20 bg-tampa">Get in touch</a>
+
+            <!-- Download Resume -->
+            <a
+              href="./assets/Edmund_Soungnomah_Kpebah_Resume.pdf"
+              download
+              class="flex-row justify-center align-center radius-50 white-color pxy-10-20 tampa-color gray-border"
+              >Download Resume</a
+            >
+          </div>
+
+          <!-- Link to GitHub -->
+          <a href="https://github.com/edmundkpebah" class="gap-4 inline-flex align-center tampa-color medium-16"
+            >See the code on GitHub
+            <span class="margin-t-4">
+              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L7 7L2 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section Work Experience -->
+      <section id="workExperiences" class="py-64 w-full justify-center bg-authWhite py-80 scroll-m-t-60">
+        <!-- Work Section Container -->
+        <div class="flex-column gap-48 container px-16 w-full px-48">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <p class="medium-14 p-color">Work Experience</p>
+            <h2>Places I've built things</h2>
+          </div>
+
+          <!-- Work Experiences -->
+          <div id="workX-el" class="flex-column align-start gap-16 w-full">
+            <!-- displayed by js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Section -->
+      <section id="projects" class="flex-column align-center py-64 bg-white w-full py-80 scroll-m-t-60">
+        <div class="flex-column align-center px-16 gap-48 w-full px-48 container">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <p class="w-full p-color medium-14">Projects</p>
+
+            <div class="flex-column align-start gap-8 w-full flex-row-720 justify-between-720 align-end-720">
+              <h2>Ideas turned into code</h2>
+
+              <!-- Link to all Projects -->
+              <a id="browse-all-nav" class="gap-4 inline-flex align-center tampa-color medium-16 pointer"
+                >Browse all Projects
+                <span class="margin-t-4">
+                  <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L7 7L2 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div id="projects-el" class="grid grid-t-a grid-gap-24 w-full grid-t-a-a-920 grid-t-a3-1024">
+            <!-- displayed by js -->
+          </div>
+        </div>
+      </section>
+
+      <!--Browse All Projects Section -->
+      <section id="browse-section" class="flex-column align-center py-64 bg-white w-full py-80 hide margin-t-80">
+        <div class="flex-column align-center px-16 gap-48 w-full px-48 container">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <!-- Back Link to Page -->
+            <a id="back-nav" class="gap-4 pointer inline-flex align-center tampa-color medium-16"
+              ><span class="margin-t-4">
+                <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.25 11.25L1.25 6.25L6.25 1.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg> </span
+              >Back
+            </a>
+            <div class="flex-column align-start w-full">
+              <h2>A Collection of My Work</h2>
+            </div>
+          </div>
+
+          <div id="browse-all-projects" class="grid grid-t-a grid-gap-24 w-full grid-t-a-a-920 grid-t-a3-1024">
+            <!-- displayed by js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Education -->
+      <section id="education" class="py-64 w-full justify-center bg-authWhite py-80 scroll-m-t-60">
+        <!-- Education Container -->
+        <div class="flex-column gap-48 container px-16 w-full px-48">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <p class="medium-14 p-color">Education</p>
+            <h2>Where It All Began</h2>
+          </div>
+
+          <!-- Work Experiences -->
+          <div id="edu-el" class="flex-column align-start gap-16 w-full">
+            <!-- displayed by js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Certification -->
+      <section id="certification" class="py-64 w-full justify-center bg-white py-80 scroll-m-t-60">
+        <!-- Certification Container -->
+        <div class="flex-column gap-48 container px-16 w-full px-48">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <p class="medium-14 p-color">Certification</p>
+            <h2>Credentials</h2>
+          </div>
+
+          <!-- Certification -->
+          <div id="cert-el" class="flex-column align-start gap-16 w-full">
+            <!-- displayed by js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Skills and Tools -->
+      <section id="skills" class="flex-column align-center py-64 bg-boneChina w-full py-80 scroll-m-t-60">
+        <div class="flex-column align-center px-16 gap-48 container w-full px-48">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-12 w-full">
+            <p class="p-color medium-14 w-full">Skills and Tools</p>
+            <h2>What I Build With</h2>
+          </div>
+
+          <!-- Skills and Toos -->
+          <div id="skill-el" class="grid grid-gap-32 grid-t-a-a w-full">
+            <!-- Displayed by Js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Message -->
+      <section id="contact" class="flex-column align-center py-64 bg-white w-full py-80 scroll-m-t-60">
+        <div class="flex-column align-center px-16 gap-32 container w-full px-48">
+          <!-- Section Heading -->
+          <div class="flex-column align-start gap-24 w-full">
+            <div class="flex-column align-start gap-12 w-full">
+              <p class="p-color medium-14 w-full">Contact</p>
+              <h2>Get in touch</h2>
+            </div>
+            <p class="p-color w-full medium-14 medium-16-720">Send me a few details and I'll get back to you shortly</p>
+          </div>
+
+          <form id="form" class="flex-column align-start gap-32 w-full" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Form Inputs-->
+            <div class="flex-column align-start gap-16 w-full">
+              <!-- Name & Email Inputs-->
+              <div class="flex-column align-start gap-16 w-full flex-row-920 max-w-582-1024">
+                <!-- Name Input -->
+                <div class="flex-column align-start gap-4 w-full">
+                  <label for="user_name" class="regular-14">Name</label>
+                  <input
+                    type="text"
+                    id="user_name"
+                    name="Name"
+                    required
+                    placeholder="Your name"
+                    class="pxy-12-16 radius-8 gray-border w-full container-min-282 google-sans-flex p-color"
+                  />
+                </div>
+                <!-- Email Input -->
+                <div class="flex-column align-start gap-4 w-full">
+                  <label for="user_email" class="regular-14">Email</label>
+                  <input
+                    type="email"
+                    id="user_email"
+                    name="Email"
+                    required
+                    placeholder="you@example.com"
+                    class="pxy-12-16 radius-8 gray-border w-full container-min-282 google-sans-flex p-color"
+                  />
+                </div>
+              </div>
+
+              <!-- Message Input -->
+              <div class="flex-column align-start gap-4 w-full max-w-582-1024">
+                <label for="user_mssg" class="regular-14">Message</label>
+                <textarea
+                  id="user_mssg"
+                  required
+                  rows="4"
+                  name = "Message"
+                  placeholder="What do you have to tell me?"
+                  class="pxy-12-16 radius-8 gray-border w-full container-min-282 container-min-h-108 google-sans-flex p-color"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="flex-row justify-center border-none align-center radius-50 white-color pxy-10-20 bg-tampa">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex-column align-center py-64 bg-authWhite w-full google-sans-flex py-80">
+      <div class="flex-column w-full align-start px-16 gap-64 container px-48">
+        <!-- Socials -->
+        <div class="flex-row w-full align-center gap-12">
+          <p class="medium-14 medium-16-720 brightBlack">Connect with me</p>
+
+          <!-- Linkedin -->
+          <a
+            href="https://www.linkedin.com/in/edmund-soungnomah-kpebah/"
+            aria-label="Go to my LinkedIn profile"
+            target="_blank"
+            class="flex-row align-center pxy-8 radius-50 gray-border p-color"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.1095 0H1.89055C0.846427 0 0 0.846427 0 1.89055V18.1095C0 19.1536 0.846427 20 1.89055 20H18.1095C19.1536 20 20 19.1536 20 18.1095V1.89055C20 0.846427 19.1536 0 18.1095 0Z"
+                fill="currentColor"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.8806 16.1194H6.76617V7.9602H3.8806V16.1194ZM5.37313 3.8806C4.57711 3.8806 3.8806 4.57711 3.8806 5.37313C3.8806 6.06965 4.57711 6.76617 5.37313 6.76617C6.06965 6.76617 6.76617 6.06965 6.76617 5.37313C6.76617 4.57711 6.06965 3.8806 5.37313 3.8806ZM16.0199 10.4478C15.8209 8.95522 15.1244 7.9602 13.0348 7.9602C11.8408 7.9602 11.0448 8.45771 10.6468 9.05473V7.9602H8.35821V16.1194H10.7463V12.0398C10.7463 11.0448 10.9453 9.95025 12.2388 9.95025C13.5323 9.95025 13.6318 11.2438 13.6318 12.1393V16.1194H16.1194V11.6418C16.1194 11.2438 16.1194 10.8458 16.0199 10.4478Z"
+                fill="#FEFEFE"
+              />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/edmundkpebah"
+            target="_blank"
+            aria-label="Go to my GitHub profile"
+            class="flex-row align-center pxy-8 radius-50 gray-border p-color"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 0C7.6255 9.84653e-05 5.32849 0.845114 3.51999 2.38385C1.71149 3.92258 0.509528 6.05462 0.12916 8.39848C-0.251207 10.7423 0.214845 13.1451 1.44393 15.1768C2.67301 17.2084 4.58491 18.7365 6.83755 19.4875C7.33755 19.575 7.52505 19.275 7.52505 19.0125C7.52505 18.775 7.51254 17.9875 7.51254 17.15C5.00003 17.6125 4.35003 16.5375 4.15003 15.975C3.9281 15.428 3.5763 14.9431 3.12503 14.5625C2.77503 14.375 2.27503 13.9125 3.11252 13.9C3.4323 13.9347 3.73901 14.046 4.00666 14.2244C4.2743 14.4028 4.49499 14.6432 4.65003 14.925C4.7868 15.1707 4.97071 15.387 5.19122 15.5615C5.41173 15.736 5.6645 15.8653 5.93506 15.9419C6.20562 16.0185 6.48864 16.041 6.76791 16.0081C7.04717 15.9752 7.3172 15.8875 7.56251 15.75C7.6058 15.2416 7.83237 14.7663 8.20003 14.4125C5.97503 14.1625 3.65003 13.3 3.65003 9.47503C3.63597 8.48118 4.00271 7.51961 4.67503 6.78753C4.36931 5.92375 4.40508 4.97581 4.77503 4.13753C4.77503 4.13753 5.6125 3.87502 7.52503 5.16253C9.16131 4.7125 10.8887 4.7125 12.525 5.16253C14.4375 3.86253 15.275 4.13753 15.275 4.13753C15.645 4.9758 15.6808 5.92376 15.375 6.78753C16.0494 7.51835 16.4164 8.48076 16.4 9.47503C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.0762 14.6544 12.26 14.9448 12.3764 15.264C12.4929 15.5833 12.5393 15.9238 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.4362 18.7304 17.3426 17.1988 18.5664 15.166C19.7903 13.1333 20.2519 10.7318 19.8689 8.39024C19.4859 6.04865 18.2832 3.91937 16.4755 2.38251C14.6678 0.84565 12.3727 0.00123491 10 0Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+
+          <!-- Mail -->
+          <a
+            href="mailto:kpebaahedmund@gmail.com?subject=Contact%20From%20Portfolio&body=Hello%20Edmund,"
+            aria-label="Send me an email"
+            class="flex-row align-center pxy-8 radius-50 gray-border p-color"
+          >
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V13C0 13.7956 0.316071 14.5587 0.87868 15.1213C1.44129 15.6839 2.20435 16 3 16H17C17.7956 16 18.5587 15.6839 19.1213 15.1213C19.6839 14.5587 20 13.7956 20 13V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM16.59 2L10.71 7.88C10.617 7.97373 10.5064 8.04812 10.3846 8.09889C10.2627 8.14966 10.132 8.1758 10 8.1758C9.86799 8.1758 9.73728 8.14966 9.61542 8.09889C9.49356 8.04812 9.38296 7.97373 9.29 7.88L3.41 2H16.59ZM18 13C18 13.2652 17.8946 13.5196 17.7071 13.7071C17.5196 13.8946 17.2652 14 17 14H3C2.73478 14 2.48043 13.8946 2.29289 13.7071C2.10536 13.5196 2 13.2652 2 13V3.41L7.88 9.29C8.4425 9.8518 9.205 10.1674 10 10.1674C10.795 10.1674 11.5575 9.8518 12.12 9.29L18 3.41V13Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Footer Nav -->
+        <div class="grid grid-t-a-a grid-r-gap-32 w-full grid-t-a4-1024">
+          <!-- Explore -->
+          <ul class="flex-column align-start gap-16 max-w-230 w-full">
+            <li><h3 class="medium-14 w-full">Explore</h3></li>
+            <li>
+              <a href="#" class="regular-14 p-color w-full">Home</a>
+            </li>
+            <li><a href="#hero" class="regular-14 p-color w-full a-active a-hover">About</a></li>
+            <li>
+              <a href="#projects" class="regular-14 p-color w-full a-active a-hover">Projects</a>
+            </li>
+          </ul>
+          <!-- Background -->
+          <ul class="flex-column align-start gap-16 max-w-230 w-full ">
+            <li><h3 class="medium-14 w-full">Background</h3></li>
+            <li>
+              <a href="#workExperiences" class="regular-14 p-color w-full a-active a-hover">Experience</a>
+            </li>
+            <li>
+              <a href="#education" class="regular-14 p-color w-full a-active a-hover">Education</a>
+            </li>
+            <li>
+              <a href="#skills" class="regular-14 p-color w-full a-active a-hover">Skills</a>
+            </li>
+          </ul>
+          <!-- Connect -->
+          <ul class="flex-column align-start gap-16 max-w-230 w-full">
+            <li><h3 class="medium-14 w-full">Connect</h3></li>
+            <li>
+              <a href="https://www.linkedin.com/in/edmund-soungnomah-kpebah/" target="_blank" class="regular-14 p-color w-full a-active a-hover">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/edmundkpebah" target="_blank" class="regular-14 p-color w-full a-active a-hover">GitHub</a>
+            </li>
+            <li>
+              <a href="mailto:kpebaahedmund@gmail.com?subject=Contact%20From%20Portfolio&body=Hello%20Edmund" class="regular-14 p-color w-full a-active a-hover">Email</a>
+            </li>
+          </ul>
+          <!-- Resources -->
+          <ul class="flex-column align-start gap-16 max-w-230 w-full">
+            <li><h3 class="medium-14 w-full">Resources</h3></li>
+            <li>
+              <a href="./assets/Edmund_Soungnomah_Kpebah_Resume.pdf" download class="regular-14 p-color w-full a-active a-hover">Download Resume</a>
+            </li>
+            <li>
+              <a href="#contact" class="regular-14 p-color w-full a-active a-hover">Get in touch</a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="regular-14 p-color w-full a-active a-hover">Website</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-column align-start py-32 gap-24 gray-border-top w-full">
+          <div class="flex-column align-start gap-8 w-full">
+            <p class="medium-14 brightBlack">Edmund S. Kpebah</p>
+
+            <div class="flex-row align-start w-full gap-24">
+              <p class="regular-14 p-color"><span>Bolgatanga</span>, <span>Ghana</span></p>
+
+              <p class="regular-14 p-color margin-l-auto">&#169;&nbsp;<span>2026</span></p>
+            </div>
+          </div>
+
+          <p class="regular-12 w-full brightBlack">Availability depends on current commitments and project scope. I'll always aim to respond promptly.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
