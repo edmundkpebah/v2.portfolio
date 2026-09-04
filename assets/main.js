@@ -46,9 +46,14 @@ const hamburgerLinks = hamburgerDisplay.querySelectorAll("a");
 const hamburgerOpenIcon = document.getElementById("ham-open");
 const hamburgerCloseIcon = document.getElementById("ham-close");
 
-//Form Elements
+// Form Elements
 const form = document.getElementById('form');
 const submitBtn = document.querySelector('button[type="submit"]');
+
+// Theme Toggle Element
+const themeToggle = document.getElementById('theme-toggle');
+const lightModeSvg = document.getElementById('light-mode-svg');
+const darkModeSvg = document.getElementById('dark-mode-svg');
 
 // Browse Projects Navigation
 browseBtn.addEventListener("click", () => {
@@ -111,6 +116,15 @@ hamburgerCloseIcon.addEventListener("click", () => {
 
   hamburgerOpenIcon.classList.remove("hide");
   hamburgerCloseIcon.classList.add("hide");
+});
+
+// Theme Toggle
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  lightModeSvg.classList.toggle('hide');
+  darkModeSvg.classList.toggle('hide');
+  
 });
 
 // Work Experience Constructor
