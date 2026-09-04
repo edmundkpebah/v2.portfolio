@@ -51,9 +51,7 @@ const form = document.getElementById('form');
 const submitBtn = document.querySelector('button[type="submit"]');
 
 // Theme Toggle Element
-const themeToggle = document.getElementById('theme-toggle');
-const lightModeSvg = document.getElementById('light-mode-svg');
-const darkModeSvg = document.getElementById('dark-mode-svg');
+const themeToggles = document.querySelectorAll('#theme-toggle');
 
 // Browse Projects Navigation
 browseBtn.addEventListener("click", () => {
@@ -119,13 +117,17 @@ hamburgerCloseIcon.addEventListener("click", () => {
 });
 
 // Theme Toggle
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+themeToggles.forEach((toggle) => {
+  const lightModeSvg = toggle.querySelector('#light-mode-svg');
+  const darkModeSvg = toggle.querySelector('#dark-mode-svg');
 
-  lightModeSvg.classList.toggle('hide');
-  darkModeSvg.classList.toggle('hide');
-  
-});
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    lightModeSvg.classList.toggle('hide');
+    darkModeSvg.classList.toggle('hide');
+  })
+})
 
 // Work Experience Constructor
 
