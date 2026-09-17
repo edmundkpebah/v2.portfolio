@@ -11,6 +11,7 @@ html {
 :root {
   --white-color: #ffffff;
   --border-color: #dadce0;
+  --border-color2: #c8d2d9;
   --alpineWhite-color: #e8f0fe;
   --alpineWhite-color2: #e8f0fe;
   --toryBlue-color: #174ea6;
@@ -26,6 +27,7 @@ html {
 body.dark-mode {
   --white-color: #202124;
   --border-color: #3c4043;
+  --border-color2: #43515f;
   --alpineWhite-color: #2d3e5e;
   --alpineWhite-color2: #5f6368;
   --toryBlue-color: #8ab4f8;
@@ -36,7 +38,7 @@ body.dark-mode {
   --adonis-color: #5b9df9;
   --authenticWhite-color: #292a2d;
   --flashWhite-color: #303134;
-  --boneChina-color: #26332d;
+  --boneChina-color: #27323d;
 }
 
 .google-sans-flex {
@@ -354,7 +356,7 @@ h3 {
 }
 
 p {
-  line-height: 20px;
+  line-height: 1.5;
 }
 
 /* Colors */
@@ -458,6 +460,10 @@ ul {
 
 .gray-border {
   border: 0.8px solid var(--border-color);
+}
+
+.gray-border2 {
+  border: 0.8px solid var(--border-color2);
 }
 
 .gray-border-bottom {

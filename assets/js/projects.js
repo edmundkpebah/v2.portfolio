@@ -4,7 +4,7 @@ import { projectsData } from "./data.js";
 // Import Functions
 import { isLiveFunc, hasGitHubFunc } from "./data.js";
 
-const projectsArr = projectsData.map((project) => {
+const projectsArr = projectsData.map( (project) => {
   const { type, title, description, tags, liveLink, gitHubLink } = project;
 
   // Tags
@@ -56,7 +56,6 @@ const projectsArr = projectsData.map((project) => {
         </div>
     `;
 });
-
 
 document.getElementById("browse-all-projects").innerHTML = projectsArr.join("");
 

@@ -117,8 +117,60 @@ function hasGitHubFunc(gitHubLink) {
     return gitHubLink !== "";
 };
 
+// Education Data
+const educationData = [
+  {
+    startDate: new Date(2022, 0),
+    endDate: new Date(2025, 11),
+    program: "Bachelor of Science in Computer Science",
+    school: "University of Technology and Applied Sciences",
+    schoolURL: "https://utas.edu.gh/",
+    location: "Navrongo",
+    country: "Ghana",
+    description: "Undergraduate program in Computer Science, covering foundational and  applied areas including data structures, database systems, software  engineering, and algorithm design and analysis"
+  }
+];
+
+// Certification Data
+const certificationData = [
+  {
+    startDate: new Date(2025, 11),
+    endDate: null,
+    course: "Frontend Developer Career Path",
+    platform: "Scrimba",
+    platformURL: "https://scrimba.com/frontend-path-c0j",
+    isOnline: true,
+    country: null,
+    description: "Project-based course covering the full frontend path in Web Dev Basics,  Making Websites Interactive, Accessible Development, and Essential CSS  Concepts fully completed, with JavaScript, React, and API integration"
+  }
+];
+
+// Skills Data
+const skillsData = [
+  {
+    category: "Languages",
+    skillTags: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    category: "Frontend",
+    skillTags: ["React"]
+  },
+  {
+    category: "Design",
+    skillTags: ["Figma", "Adobe Illustrator"]
+  },
+  {
+    category: "Tools",
+    skillTags: ["Git", "GitHub"]
+  },
+  {
+    category: "OS",
+    skillTags: ["Microsoft Windows", "Linux"]
+  }
+];
+ 
 // Exporting Data
-export { profileData, workExperienceData, projectsData };
+export { profileData, workExperienceData, projectsData, educationData, certificationData, skillsData };
 
 // Exporting Functions
 export { dateFormatFunc, isLiveFunc, hasGitHubFunc };

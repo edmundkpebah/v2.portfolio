@@ -1,5 +1,5 @@
 // Import Data
-import { profileData, workExperienceData, projectsData } from "./data.js";
+import { profileData, workExperienceData, projectsData, educationData, certificationData, skillsData } from "./data.js";
 
 // Import Functions
 import { dateFormatFunc, isLiveFunc, hasGitHubFunc } from "./data.js";
@@ -25,85 +25,6 @@ if (bio) {
 if (logoName) {
   logoName.textContent = profileData.profileName;
 }
-
-// Skills and Tools
-const skillElement = document.getElementById("skill-el");
-const skillArray = [];
-let skillDisplay = ``;
-
-// Education
-const eduElement = document.getElementById("edu-el");
-const eduArray = [];
-let eduDisplay = ``;
-
-// Certification
-const certElement = document.getElementById("cert-el");
-const certArray = [];
-let certDisplay = ``;
-
-// Page Sections
-const heroSection = document.getElementById("hero");
-const workExperienceSection = document.getElementById("workExperiences");
-const projectSection = document.getElementById("projects");
-const educationSection = document.getElementById("education");
-const certificationSection = document.getElementById("certification");
-const skillSection = document.getElementById("skills");
-const contactSection = document.getElementById("contact");
-
-// Hamburger Elements
-const hamburgerButton = document.getElementById("hamburger-button");
-const hamburgerDisplay = document.getElementById("hamburger-display");
-const hamburgerLinks = hamburgerDisplay.querySelectorAll("a");
-const hamburgerOpenIcon = document.getElementById("ham-open");
-const hamburgerCloseIcon = document.getElementById("ham-close");
-
-// Form Elements
-const form = document.getElementById("form");
-const submitBtn = document.querySelector('button[type="submit"]');
-
-// Theme Toggle Element
-const themeToggles = document.querySelectorAll("#theme-toggle");
-
-// Hamburger Navigation
-
-// Open Hamburger Display
-hamburgerOpenIcon.addEventListener("click", () => {
-  hamburgerDisplay.classList.remove("hide");
-
-  hamburgerOpenIcon.classList.add("hide");
-  hamburgerCloseIcon.classList.remove("hide");
-});
-
-// Hamburger Elements Navigation
-hamburgerLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburgerDisplay.classList.add("hide");
-
-    hamburgerOpenIcon.classList.remove("hide");
-    hamburgerCloseIcon.classList.add("hide");
-  });
-});
-
-// Close Hamburger display
-hamburgerCloseIcon.addEventListener("click", () => {
-  hamburgerDisplay.classList.add("hide");
-
-  hamburgerOpenIcon.classList.remove("hide");
-  hamburgerCloseIcon.classList.add("hide");
-});
-
-// Theme Toggle
-themeToggles.forEach((toggle) => {
-  const lightModeSvg = toggle.querySelector("#light-mode-svg");
-  const darkModeSvg = toggle.querySelector("#dark-mode-svg");
-
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    lightModeSvg.classList.toggle("hide");
-    darkModeSvg.classList.toggle("hide");
-  });
-});
 
 // Work Experiences
 const workExperiences = document.getElementById("work-experiences");
@@ -205,205 +126,104 @@ const liveProjectsArr = projectsData.map((project) => {
   }
 });
 
-// Display Projects
-console.log(liveProjectsArr);
+// Display Live Projects
 if (projectsEl) {
   projectsEl.innerHTML = liveProjectsArr.join("");
 }
 
-// Education Constructor
+// Education
+const eduElement = document.getElementById("edu-el");
+const eduArray = educationData.map( (edu) => {
 
-class Education {
-  constructor(startDate, endDate, program, school, schoolURL, location, country, desc) {
-    this.startDate = startDate;
-    this.endDate = endDate;
-    this.program = program;
-    this.school = school;
-    this.schoolURL = schoolURL;
-    this.location = location;
-    this.country = country;
-    this.desc = desc;
-  }
+  const {startDate, endDate, program, school, schoolURL, location, country, description } = edu;
 
-  formatDate(date) {
-    if (date === null) {
-      return "Present";
-    } else {
-      return date.toLocaleDateString("en-Us", {
-        month: "long",
-        year: "numeric",
-      });
-    }
-  }
-}
-
-// Education 1
-const edu01 = new Education(
-  new Date(2022, 0),
-  new Date(2025, 11),
-  "Bachelor of Science in Computer Science",
-  "University of Technology and Applied Sciences",
-  "https://utas.edu.gh/",
-  "Navrongo",
-  "Ghana",
-  "Undergraduate program in Computer Science, covering foundational and  applied areas including data structures, database systems, software  engineering, and algorithm design and analysis",
-);
-// Add edu 1 to Array
-eduArray.push(edu01);
-
-// Loop through edu Array
-for (let edu of eduArray) {
-  eduDisplay += ` 
+  return ` 
     <div class="flex-column align-start gap-16 py-32 gray-border-top w-full flex-row-1024 gap-32-1024">
-        <p class="p-duration regular-14 p-color min-w-256-1024"><span>${edu.formatDate(edu.startDate)}</span> - <span>${edu.formatDate(edu.endDate)}</span></p>
+        <p class="p-duration regular-14 p-color min-w-256-1024"><span>${dateFormatFunc(startDate)}</span> - <span>${dateFormatFunc(endDate)}</span></p>
 
         <div class="flex-column align-start gap-16 w-full">
 
             <div class="flex-column align-start gap-4 w-full">
-                <h3>${edu.program}</h3>
+                <h3>${program}</h3>
                 <p class="p-color regular-14 regular-16-720 margin-t-8-720">
-                    <span><a class="text-underline web-link" href="${edu.schoolURL}" target="_blank" rel="noopener noreferrer">${edu.school}</a></span> &#183; 
-                    <span>${edu.location}, ${edu.country}</span>
+                    <span><a class="text-underline web-link" href="${schoolURL}" target="_blank" rel="noopener noreferrer">${school}</a></span> &#183; 
+                    <span>${location}, ${country}</span>
                 </p>
             </div>
 
-            <p class="p-color regular-14 container-narrow regular-16-720">${edu.desc}.</p>
+            <p class="p-color regular-14 container-narrow regular-16-720">${description}.</p>
         </div>
     </div> 
 `;
-}
+});
 
 //Display Education
 if (eduElement) {
-  eduElement.innerHTML = eduDisplay;
+  eduElement.innerHTML = eduArray.join("");
 }
 
-// Certificatioin Constructor
-class Certification {
-  constructor(startDate, endDate, course, platform, platformUrl, desc, isOnline, location, country) {
-    this.startDate = startDate;
-    this.endDate = endDate;
-    this.course = course;
-    this.platform = platform;
-    this.platformUrl = platformUrl;
-    this.desc = desc;
-    this.isOnline = isOnline;
-    this.country = country;
-  }
-
-  formatDate(date) {
-    if (date === null) {
-      return "Present";
-    } else {
-      return date.toLocaleDateString("en-Us", {
-        month: "long",
-        year: "numeric",
-      });
-    }
-  }
-}
-
-// Certification 1
-const cert01 = new Certification(
-  new Date(2025, 11),
-  null,
-  "Frontend Developer Career Path",
-  "Scrimba",
-  "https://scrimba.com/frontend-path-c0j",
-  "Project-based course covering the full frontend path in Web Dev Basics,  Making Websites Interactive, Accessible Development, and Essential CSS  Concepts fully completed, with JavaScript, React, and API integration",
-  true,
-  null,
-);
-// Add Certification 1 to Array
-certArray.push(cert01);
-
-// Loop through Certification Array
-for (let cert of certArray) {
-  certDisplay += ` 
+// Certification
+const certElement = document.getElementById("cert-el");
+const certArray = certificationData.map( (cert) => {
+  const { startDate, endDate, course, platform, platformURL, description, isOnline, country} = cert;
+  
+  return ` 
     <div class="flex-column align-start gap-16 py-32 gray-border-top w-full flex-row-1024 gap-32-1024">
-        <p class="p-duration regular-14 p-color min-w-256-1024"><span>${cert.formatDate(cert.startDate)}</span> - <span>${cert.formatDate(cert.endDate)}</span></p>
+        <p class="p-duration regular-14 p-color min-w-256-1024"><span>${dateFormatFunc(startDate)}</span> - <span>${dateFormatFunc(endDate)}</span></p>
 
         <div class="flex-column align-start gap-16 w-full">
 
             <div class="flex-column align-start gap-4 w-full">
-                <h3>${cert.course}</h3>
+                <h3>${course}</h3>
                 <p class="p-color regular-14 regular-16-720 margin-t-8-720 ">
-                    <span><a class="text-underline web-link" href="${cert.platformUrl}" target="_blank" rel="noopener noreferrer">${cert.platform}</a></span>  &#183; 
-                    <span>${cert.isOnline ? "Online" : cert.location || ""}</span>
+                    <span><a class="text-underline web-link" href="${platformURL}" target="_blank" rel="noopener noreferrer">${platform}</a></span>  &#183; 
+                    <span>${isOnline ? "Online" : country || ""}</span>
                 </p>
             </div>
 
-            <p class="p-color regular-14 container-narrow regular-16-720">${cert.desc}.</p>
+            <p class="p-color regular-14 container-narrow regular-16-720">${description}.</p>
         </div>
     </div> 
 `;
-}
+})
 
 //Display Certification
 if (certElement) {
-  certElement.innerHTML = certDisplay;
+  certElement.innerHTML = certArray;
 }
 
-// Skills Constructor
-class Skills {
-  constructor(category, skilltags) {
-    this.category = category;
-    this.skilltags = skilltags;
-  }
-}
+// Skills and Tools
+const skillElement = document.getElementById("skill-el");
+const skillArray = skillsData.map( (skill) => {
+  const { category, skillTags } = skill;
 
-// Skill 1
-const skill01 = new Skills("Languages", ["HTML", "CSS", "JavaScript", "TypeScript"]);
-// Add Skill to skillsArray
-skillArray.push(skill01);
-
-// Skill 2
-const skill02 = new Skills("Frontend", ["React"]);
-// Add Skill to skillsArray
-skillArray.push(skill02);
-
-// Skill 3
-const skill03 = new Skills("Design", ["Figma", "Adobe Illustrator"]);
-// Add Skill to skillsArray
-skillArray.push(skill03);
-
-// Skill 4
-const skill04 = new Skills("Tools", ["Git", "GitHub", "Vercel"]);
-// Add Skill to skillsArray
-skillArray.push(skill04);
-
-// Skill 5
-const skill05 = new Skills("OS", ["Microsoft Windows"]);
-// Add Skill to skillsArray
-skillArray.push(skill05);
-
-// Loop through Skills Array
-for (let skill of skillArray) {
-  let skilltags_el = ``;
-
-  for (let tag of skill.skilltags) {
-    skilltags_el += `
-            <div class="flex-row justify-center align-center pxy-4-12 gray-border radius-50">
+  const tagsArray = skillTags.map( (tag) => {
+    return `
+            <div class="flex-row justify-center align-center pxy-4-12 gray-border2 radius-50">
                 <p class="medium-14 p-color">${tag}</p>
             </div>
         `;
-  }
+  }).join("");
 
-  skillDisplay += `
+  return `
     <div class="flex-column align-start gap-16 w-full">
-        <h3 class="medium-16">${skill.category}</h3>
+        <h3 class="medium-16">${category}</h3>
 
         <div class="flex-row flex-wrap align-content-center gap-8">
-            ${skilltags_el}
+            ${tagsArray}
         </div>
     </div>
     `;
+});
+
+//Display Skills and Tools
+if (skillElement) {
+  skillElement.innerHTML = skillArray.join("");
 }
 
-//Display Skills
-if (skillElement) {
-  skillElement.innerHTML = skillDisplay;
-}
+// Form Elements
+const form = document.getElementById("form");
+const submitBtn = document.querySelector('button[type="submit"]');
 
 // Form Submission Validation
 if (form) {
@@ -438,4 +258,4 @@ if (form) {
       submitBtn.disabled = false;
     }
   });
-}
+};
