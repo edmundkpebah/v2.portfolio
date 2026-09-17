@@ -3,13 +3,13 @@
 const profileData = {
   role: "Frontend Developer",
   profileName: "Edmund S. Kpebah",
-  bio: "Frontend Developer with hands-on experience building responsive, user-focused web experiences with HTML, CSS, JavaScript, and React. I combine strong attention to detail with a problem-solving mindset to turn ideas and real-world challenges into clean, intuitive, and reliable digital experiences. I’m driven to learn quickly, take ownership, and contribute meaningfully to every project I work on.",
+  bio: "I’m a Frontend Developer who enjoys turning ideas into clean, responsive websites and applications. I work with HTML, CSS, JavaScript, and React, and I care about writing code that is simple, reliable, and easy to maintain. I’m always learning, improving my skills, and looking for opportunities to work on real products and solve real problems."
 };
 
 // Work Experiences Data 
 const workExperienceData = [
   {
-    startDate: new Date(2025, 8),
+    startDate: new Date(2025, 10),
     endDate: null,
     title: 'Design Engineer (National Service)',
     organization: 'PITTBIC, SCIS - UTAS',
@@ -17,8 +17,8 @@ const workExperienceData = [
     location: 'Navrongo',
     country: 'Ghana',
     description:
-      'Supporting IT training and business incubation initiatives at PITTBIC. Currently designing the website and brand identity (logo, visual system) for PITTBIC, ahead of development.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Git'],
+      'Working on the PITTBIC website and brand identity, including the logo, typography, colors, icon set, and overall visual direction. I’m also involved in shaping the website’s design and user experience as the project continues to develop',
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Adobe Illustrator', 'Figma'],
   },
 
   {
@@ -30,7 +30,7 @@ const workExperienceData = [
     location: 'Remote',
     country: 'Ghana',
     description:
-      'Contributing to marketing efforts for a creative venture as part of the Intern-with-a-Creative-Venture Program, working directly with the team on content creation and social media design assets to support outreach and brand visibility.',
+      'Contributing to marketing efforts for a creative venture as part of the Intern-with-a-Creative-Venture Program, working directly with the team on content creation and social media design assets to support outreach and brand visibility',
     tags: ['Figma', 'Adobe Illustrator'],
   },
 ];
@@ -49,9 +49,18 @@ const projectsData = [
     title: 'Printalise',
     description:
       'Contributing to the frontend development of a print-on-demand platform that helps creators sell custom products online',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Adobe Illustrator'],
     liveLink: 'https://printalise.com/',
     gitHubLink: '',
+  },
+    {
+    type: 'Frontend App',
+    title: 'Portfolio V2',
+    description:
+      'Currently designing the next version of my personal portfolio; development begins once the design is finalized',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    liveLink: '',
+    gitHubLink: 'https://github.com/edmundkpebah/v2.portfolio',
   },
   {
     type: 'Frontend App',
@@ -73,15 +82,6 @@ const projectsData = [
   },
   {
     type: 'Frontend App',
-    title: 'Portfolio V2',
-    description:
-      'Currently designing the next version of my personal portfolio; development begins once the design is finalized',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    liveLink: '#',
-    gitHubLink: '',
-  },
-  {
-    type: 'Fullstack App',
     title: 'St. Augustine Catholic Chaplaincy Website',
     description:
       "A concept site for my parish chaplaincy in Navrongo, inspired by Elevation Church's web presence",
@@ -90,7 +90,7 @@ const projectsData = [
     gitHubLink: '',
   },
   {
-    type: 'Fullstack App',
+    type: 'Frontend App',
     title: 'PITTBIC Website',
     description:
       'A concept website for PITTBIC, to be designed and developed',
@@ -99,7 +99,7 @@ const projectsData = [
     gitHubLink: '',
   },
   {
-    type: 'Fullstack App',
+    type: 'Frontend App',
     title: 'InternAfrica Website',
     description:
       'Redeveloping the site for InternAfrica, where I previously completed an internship',
@@ -127,7 +127,7 @@ const educationData = [
     schoolURL: "https://utas.edu.gh/",
     location: "Navrongo",
     country: "Ghana",
-    description: "Undergraduate program in Computer Science, covering foundational and  applied areas including data structures, database systems, software  engineering, and algorithm design and analysis"
+    description: "Undergraduate program with a strong foundation in programming, software engineering, databases, algorithms, and computer systems. I apply this foundation to building practical software and web applications."
   }
 ];
 
@@ -141,7 +141,7 @@ const certificationData = [
     platformURL: "https://scrimba.com/frontend-path-c0j",
     isOnline: true,
     country: null,
-    description: "Project-based course covering the full frontend path in Web Dev Basics,  Making Websites Interactive, Accessible Development, and Essential CSS  Concepts fully completed, with JavaScript, React, and API integration"
+    description: "project-based frontend learning path, covering everything from HTML and CSS to JavaScript, accessibility, React, API integration and more. I’m working through the lessons step by step and building projects as I learn."
   }
 ];
 
@@ -161,7 +161,7 @@ const skillsData = [
   },
   {
     category: "Tools",
-    skillTags: ["Git", "GitHub"]
+    skillTags: ["VSCode", "Git", "GitHub"]
   },
   {
     category: "OS",
